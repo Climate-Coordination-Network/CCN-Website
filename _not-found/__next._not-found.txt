@@ -1,0 +1,4 @@
+1:"$Sreact.fragment"
+2:I[24466,["/climate-coordination-network-website/_next/static/chunks/0660c7286f0107ab.js","/climate-coordination-network-website/_next/static/chunks/2f8712ad1cd9853d.js","/climate-coordination-network-website/_next/static/chunks/7068b11719c760ea.js"],"default"]
+3:I[23500,["/climate-coordination-network-website/_next/static/chunks/0660c7286f0107ab.js","/climate-coordination-network-website/_next/static/chunks/2f8712ad1cd9853d.js","/climate-coordination-network-website/_next/static/chunks/7068b11719c760ea.js"],"default"]
+0:{"buildId":"mMyp90R_yZhLwqFA3vDQr","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
