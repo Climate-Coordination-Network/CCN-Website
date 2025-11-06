@@ -103,7 +103,7 @@ export function ImpactCategories() {
             return (
               <Card
                 key={index}
-                className={`p-4 bg-card border-primary/10 hover:border-primary/30 transition-all hover:shadow-lg hover:shadow-primary/5 cursor-pointer ${
+                className={`p-4 bg-card border-2 border-primary/10 hover:border-primary/40 transition-all hover:shadow-lg hover:shadow-primary/10 cursor-pointer dark:border-primary/50 dark:shadow-lg dark:shadow-primary/20 dark:bg-card/80 dark:hover:border-primary/70 dark:hover:shadow-xl dark:hover:shadow-primary/30 ${
                   isExpanded ? "md:col-span-2" : ""
                 }`}
                 onClick={() => setExpandedCard(isExpanded ? null : index)}

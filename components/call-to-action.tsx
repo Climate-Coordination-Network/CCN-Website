@@ -6,7 +6,7 @@ export function CallToAction() {
   return (
     <section className="py-20 px-4">
       <div className="container max-w-6xl mx-auto">
-        <Card className="p-8 md:p-12 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 border-primary/20 relative overflow-hidden">
+        <Card className="p-8 md:p-12 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 border-2 border-primary/20 dark:border-primary/30 dark:shadow-xl dark:shadow-primary/10 relative overflow-hidden">
           {/* Background decoration */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl" />
@@ -15,7 +15,8 @@ export function CallToAction() {
             <div className="text-center space-y-4">
               <h2 className="text-3xl md:text-5xl font-bold text-balance">Join the Climate Revolution</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance leading-relaxed">
-                This is not a victory lap; it's a call to action. We're raising funds for 2026 with a goal to distribute at least $1M to early-stage climate innovators.
+                This is not a victory lap; it's a call to action. We're raising funds for 2026 with a goal to distribute
+                at least $1M to early-stage climate innovators.
               </p>
             </div>
 
@@ -27,10 +28,7 @@ export function CallToAction() {
                   </div>
                 </div>
                 <h3 className="font-semibold text-lg">Philanthropic Capital</h3>
-                <p className="text-sm text-muted-foreground text-balance">
-                  Support additional funding 
-rounds in 2026
-                </p>
+                <p className="text-sm text-muted-foreground text-balance">Support funding rounds in 2026</p>
               </div>
 
               <div className="text-center space-y-3">
@@ -58,7 +56,7 @@ rounds in 2026
               </div>
             </div>
 
-            <div className="space-y-6 p-6 bg-card/50 rounded-xl border border-primary/20">
+            <div className="space-y-6 p-6 bg-card/50 rounded-xl border-2 border-primary/20 dark:border-primary/30">
               <p className="text-lg text-center text-balance leading-relaxed">
                 The funding landscape is still failing early-stage climate innovators. There are few mechanisms to get
                 capital into the hands of grassroots builders—especially those in the Global South—when they need it
@@ -70,8 +68,10 @@ rounds in 2026
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button size="lg" className="text-lg px-8 bg-primary hover:bg-primary/90 text-primary-foreground">
-                Support Our Mission
+              <Button size="lg" asChild className="text-lg px-8 bg-primary hover:bg-primary/90 text-primary-foreground">
+                <a href="https://impact.climatecoordination.org" target="_blank" rel="noopener noreferrer">
+                  View Impact Report
+                </a>
               </Button>
               <Button
                 size="lg"
@@ -82,9 +82,7 @@ rounds in 2026
               </Button>
             </div>
 
-            <div className="text-center pt-4">
-              
-            </div>
+            <div className="text-center pt-4"></div>
           </div>
         </Card>
       </div>

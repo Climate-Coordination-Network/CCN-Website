@@ -10,6 +10,89 @@ export function FeaturedProjects() {
 
   const projects = [
     {
+      name: "Astral Protocol",
+      location: "UK",
+      funding: "$45,000+",
+      rounds: 10,
+      description:
+        "Pioneering the decentralized geospatial web—building privacy-focused alternatives to Google Maps with location data as a public good.",
+      impact: "Helping verify reforestation projects and validate satellite data for climate scientists.",
+      tags: ["Geospatial", "Privacy", "Climate Monitoring"],
+    },
+    {
+      name: "Atlantis",
+      location: "India",
+      funding: "$150,000+",
+      rounds: 13,
+      description:
+        'Creating a peer-to-peer impact network—the "GitHub for climate impact" that tracks and incentivizes real-world actions.',
+      impact: "Could connect 10M+ grassroots climate efforts to funding by 2030, bridging the $4T climate funding gap.",
+      tags: ["Impact Tracking", "Web3", "Microloans"],
+    },
+    {
+      name: "Beyond Fossil Fuels",
+      location: "Canada",
+      funding: "Gitcoin/CCN funded",
+      rounds: 3,
+      description:
+        "Uplifting Indigenous legal battles where defending sovereignty means stewarding the earth—supporting land defenders blocking pipelines and challenging climate inaction.",
+      impact:
+        "Supporting Tiny House Warriors, Tsleil-Waututh Nation's Sacred Trust, and Wet'suwet'en Constitutional case to halt tar sands expansion.",
+      tags: ["Indigenous Rights", "Legal Action", "Pipeline Resistance"],
+    },
+    {
+      name: "Blue Energy Reef",
+      location: "Indonesia",
+      funding: "$92,000",
+      rounds: 1,
+      description:
+        "Merging Biorock reef restoration with ocean-powered renewable energy, creating resilient reefs that grow 10x faster.",
+      impact: "Reefs sequester 900M tons of CO₂ yearly, buffer 95% of wave energy, support $30B in economic value.",
+      tags: ["Ocean", "Coral Reefs", "Blue Energy"],
+    },
+    {
+      name: "Blue Filter",
+      location: "Palestine",
+      funding: "$80,000+",
+      rounds: 2,
+      description:
+        "Tackling water scarcity with innovative plant-based filtration technology—providing sustainable, low-cost clean drinking water while reducing carbon emissions from energy-intensive purification.",
+      impact:
+        "Eco-friendly filtration using plant seeds eliminates harmful chemicals and high-energy processes. Serving communities in Gaza, West Bank, Egypt, Iraq, and Jordan. Could prevent millions of tons of CO₂ from desalination and chemical treatments.",
+      tags: ["Water Purification", "Clean Technology", "Climate Adaptation"],
+    },
+    {
+      name: "GainForest",
+      location: "Switzerland",
+      funding: "$29,900+",
+      rounds: 11,
+      description:
+        "Using AI and blockchain to turn Indigenous stewards into verified conservationists, protecting 80% of global biodiversity.",
+      impact: "Built AI tools to digitize Indigenous ecological knowledge, now used in COP negotiations.",
+      tags: ["AI", "Indigenous Rights", "Conservation"],
+    },
+    {
+      name: "Kokonut Network",
+      location: "Dominican Republic",
+      funding: "$55,249",
+      rounds: 7,
+      description:
+        "Combining syntropic agroforestry with decentralized governance to rebuild food forests and economies from the ground up.",
+      impact: "Sequester 5x more carbon than monocultures, generating $3,200+/hectare annual income.",
+      tags: ["Agroforestry", "ReFi", "Food Security"],
+    },
+    {
+      name: "ReFi DAO",
+      location: "Global",
+      funding: "$350,000",
+      rounds: 10,
+      description:
+        "ReFi DAO exists to support, scale, and empower the ReFi movement by developing public goods, funding models, and infrastructure that enable regenerative projects to thrive.",
+      impact:
+        "Since 2021, distributed $100,000+ to 30+ Local Nodes while hosting 100+ events across 58+ cities. Built foundational Web3 tools including Impact Data Commons for on-chain impact tracking and Prosperity Passport, connecting local regenerative projects with global funding through innovative models like retroactive and quadratic funding.",
+      tags: ["ReFi Infrastructure", "Community Building", "Education"],
+    },
+    {
       name: "Shamba Network",
       location: "Kenya",
       funding: "$110,000+",
@@ -32,56 +115,6 @@ export function FeaturedProjects() {
       tags: ["Solar Energy", "Energy Access", "Off-Grid"],
     },
     {
-      name: "GainForest",
-      location: "Switzerland",
-      funding: "$29,900+",
-      rounds: 11,
-      description:
-        "Using AI and blockchain to turn Indigenous stewards into verified conservationists, protecting 80% of global biodiversity.",
-      impact: "Built AI tools to digitize Indigenous ecological knowledge, now used in COP negotiations.",
-      tags: ["AI", "Indigenous Rights", "Conservation"],
-    },
-    {
-      name: "Atlantis",
-      location: "India",
-      funding: "$150,000+",
-      rounds: 13,
-      description:
-        'Creating a peer-to-peer impact network—the "GitHub for climate impact" that tracks and incentivizes real-world actions.',
-      impact: "Could connect 10M+ grassroots climate efforts to funding by 2030, bridging the $4T climate funding gap.",
-      tags: ["Impact Tracking", "Web3", "Microloans"],
-    },
-    {
-      name: "Kokonut Network",
-      location: "Dominican Republic",
-      funding: "$55,249",
-      rounds: 7,
-      description:
-        "Combining syntropic agroforestry with decentralized governance to rebuild food forests and economies from the ground up.",
-      impact: "Sequester 5x more carbon than monocultures, generating $3,200+/hectare annual income.",
-      tags: ["Agroforestry", "ReFi", "Food Security"],
-    },
-    {
-      name: "Blue Energy Reef",
-      location: "Indonesia",
-      funding: "$92,000",
-      rounds: 1,
-      description:
-        "Merging Biorock reef restoration with ocean-powered renewable energy, creating resilient reefs that grow 10x faster.",
-      impact: "Reefs sequester 900M tons of CO₂ yearly, buffer 95% of wave energy, support $30B in economic value.",
-      tags: ["Ocean", "Coral Reefs", "Blue Energy"],
-    },
-    {
-      name: "Astral Protocol",
-      location: "UK",
-      funding: "$45,000+",
-      rounds: 10,
-      description:
-        "Pioneering the decentralized geospatial web—building privacy-focused alternatives to Google Maps with location data as a public good.",
-      impact: "Helping verify reforestation projects and validate satellite data for climate scientists.",
-      tags: ["Geospatial", "Privacy", "Climate Monitoring"],
-    },
-    {
       name: "Solarpunk Nomads",
       location: "Italy",
       funding: "$49,000",
@@ -92,40 +125,15 @@ export function FeaturedProjects() {
       tags: ["Mobility", "Education", "Zero-Carbon"],
     },
     {
-      name: "Project Name",
-      location: "Location",
-      funding: "$0",
-      rounds: 0,
-      description: "Project description coming soon.",
-      impact: "Impact details to be added.",
-      tags: ["Tag 1", "Tag 2"],
-    },
-    {
-      name: "Project Name",
-      location: "Location",
-      funding: "$0",
-      rounds: 0,
-      description: "Project description coming soon.",
-      impact: "Impact details to be added.",
-      tags: ["Tag 1", "Tag 2"],
-    },
-    {
-      name: "Project Name",
-      location: "Location",
-      funding: "$0",
-      rounds: 0,
-      description: "Project description coming soon.",
-      impact: "Impact details to be added.",
-      tags: ["Tag 1", "Tag 2"],
-    },
-    {
-      name: "Project Name",
-      location: "Location",
-      funding: "$0",
-      rounds: 0,
-      description: "Project description coming soon.",
-      impact: "Impact details to be added.",
-      tags: ["Tag 1", "Tag 2"],
+      name: "The Elephant Room",
+      location: "Canada",
+      funding: "CCN funded",
+      rounds: 2,
+      description:
+        "Crafting high-impact multimedia campaigns that turn climate apathy into action—partnering with Indigenous communities, local governments, and activists to make climate solutions tangible and urgent.",
+      impact:
+        "Stopped destructive projects like the Raven Coal Mine, supported Indigenous nations against pipelines, created award-winning programs like Cool Neighborhoods (UN-recognized), and mobilized voters with VoteClimate campaigns.",
+      tags: ["Media Campaigns", "Climate Communication", "Grassroots Organizing"],
     },
   ]
 
@@ -150,7 +158,7 @@ export function FeaturedProjects() {
             return (
               <Card
                 key={index}
-                className={`p-4 bg-card border-primary/10 hover:border-primary/30 transition-all cursor-pointer ${
+                className={`p-4 bg-card border-2 border-primary/10 hover:border-primary/40 transition-all cursor-pointer dark:border-primary/50 dark:shadow-lg dark:shadow-primary/20 dark:bg-card/80 dark:hover:border-primary/70 dark:hover:shadow-xl dark:hover:shadow-primary/30 ${
                   isExpanded ? "md:col-span-2 lg:col-span-3" : ""
                 }`}
                 onClick={() => toggleProject(index)}
@@ -184,7 +192,7 @@ export function FeaturedProjects() {
                   </div>
 
                   {isExpanded && (
-                    <div className="space-y-4 pt-2 border-t border-primary/10 animate-in fade-in slide-in-from-top-2 duration-300">
+                    <div className="space-y-4 pt-2 border-t-2 border-primary/10 dark:border-primary/30 animate-in fade-in slide-in-from-top-2 duration-300">
                       <div className="flex gap-4 text-sm">
                         <div>
                           <span className="text-muted-foreground">Funding: </span>
@@ -200,7 +208,7 @@ export function FeaturedProjects() {
                         {project.description}
                       </p>
 
-                      <div className="p-3 bg-primary/5 rounded-lg border border-primary/10">
+                      <div className="p-3 bg-primary/5 rounded-lg border-2 border-primary/10 dark:border-primary/20">
                         <p className="text-xs text-foreground/80 leading-relaxed text-balance">
                           <span className="font-semibold text-primary">Impact: </span>
                           {project.impact}

@@ -76,7 +76,7 @@
 
 @theme inline {
   /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
-  --font-sans: 'IBM Plex Sans', 'IBM Plex Sans Fallback';
+  --font-sans: "IBM Plex Sans", "IBM Plex Sans Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -122,6 +122,16 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .dark .card-enhanced {
+    @apply border-primary/30 shadow-lg shadow-primary/5;
+  }
+
+  .dark .card-enhanced:hover {
+    @apply border-primary/50 shadow-xl shadow-primary/10;
   }
 }
 

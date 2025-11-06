@@ -1,4 +1,4 @@
-import { Leaf } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   const partners = [
@@ -21,8 +21,14 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-primary/10 rounded-lg">
-                <Leaf className="w-6 h-6 text-primary" />
+              <div className="relative w-12 h-12 flex-shrink-0">
+                <Image
+                  src="/images/design-mode/Logo%20Design%20%282%29.png"
+                  alt="Climate Coordination Network"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
               </div>
               <span className="text-xl font-bold">Climate Coordination Network</span>
             </div>

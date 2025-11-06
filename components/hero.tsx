@@ -19,17 +19,23 @@ export function Hero() {
 
       <div className="container relative z-10 px-4 py-20">
         <div className="max-w-5xl mx-auto text-center space-y-8">
-          {/* Logo with name */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center items-center gap-6 mb-8">
             <div className="relative opacity-95 mix-blend-normal">
               <Image
-                src="/logo-full.png"
-                alt="Climate Coordination Network"
-                width={600}
-                height={267}
-                className="w-full max-w-md md:max-w-lg drop-shadow-sm"
+                src="/images/design-mode/Logo%20Design%20%282%29(1).png"
+                alt="Climate Coordination Network Logo"
+                width={180}
+                height={180}
+                className="drop-shadow-sm"
                 priority
               />
+            </div>
+            <div className="text-left">
+              <div className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+                <div className="text-5xl">Climate</div>
+                <div className="text-5xl">Coordination</div>
+                <div className="text-5xl">Network</div>
+              </div>
             </div>
           </div>
 
@@ -67,7 +73,7 @@ export function Hero() {
               variant="outline"
               className="text-lg px-8 border-primary/30 hover:bg-primary/10 bg-transparent"
             >
-              Support Our Mission
+              Partner With Us
             </Button>
           </div>
         </div>
