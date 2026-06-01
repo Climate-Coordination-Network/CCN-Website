@@ -23,7 +23,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <div className="relative w-12 h-12 flex-shrink-0">
                 <Image
-                  src="/images/design-mode/Logo%20Design%20%282%29.png"
+                  src="/images/logo-mark.png"
                   alt="Climate Coordination Network"
                   width={48}
                   height={48}

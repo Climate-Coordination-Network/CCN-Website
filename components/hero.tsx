@@ -22,7 +22,7 @@ export function Hero() {
           <div className="flex justify-center items-center gap-6 mb-8">
             <div className="relative opacity-95 mix-blend-normal">
               <Image
-                src="/images/design-mode/Logo%20Design%20%282%29(1).png"
+                src="/images/logo-hero.png"
                 alt="Climate Coordination Network Logo"
                 width={180}
                 height={180}
