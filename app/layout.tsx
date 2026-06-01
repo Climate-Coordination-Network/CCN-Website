@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 
-import { Analytics } from "@vercel/analytics/next"
 import { ThemeToggle } from "@/components/theme-toggle"
 import "./globals.css"
 import { Space_Grotesk, JetBrains_Mono, IBM_Plex_Sans as V0_Font_IBM_Plex_Sans, Geist_Mono as V0_Font_Geist_Mono } from 'next/font/google'
@@ -11,7 +10,7 @@ const _ibmPlexSans = V0_Font_IBM_Plex_Sans({ subsets: ['latin'], weight: ["100",
 const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-sans" })
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-sans" })
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
   title: "Climate Coordination Network | Funding Climate Innovation",
@@ -30,7 +29,6 @@ export default function RootLayout({
       <body className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         <ThemeToggle />
         {children}
-        <Analytics />
       </body>
     </html>
   )
