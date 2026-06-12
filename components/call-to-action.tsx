@@ -1,90 +1,67 @@
-import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Heart, Users, Zap } from "lucide-react"
+import { ImpactReportButton } from "@/components/impact-report-button"
+
+const ways = [
+  { index: "01", title: "Philanthropic capital", body: "Fund the 2026 grant rounds and put money directly into builders' hands." },
+  { index: "02", title: "Partnership", body: "Co-create and co-fund future rounds, shaped around your climate thesis." },
+  { index: "03", title: "Collaboration", body: "Host or co-design a round with us and reach grassroots innovators worldwide." },
+]
 
 export function CallToAction() {
   return (
-    <section className="py-20 px-4">
-      <div className="container max-w-6xl mx-auto">
-        <Card className="p-8 md:p-12 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 border-2 border-primary/20 dark:border-primary/30 dark:shadow-xl dark:shadow-primary/10 relative overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl" />
+    <section className="bg-background py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
+        <div className="relative overflow-hidden rounded-lg border border-border bg-secondary px-6 py-14 md:px-14 md:py-20">
+          {/* grow-lamp glow */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-20 -top-24 h-96 w-96 rounded-full animate-sun-pulse"
+            style={{
+              background:
+                "radial-gradient(circle, color-mix(in oklch, var(--accent) 45%, transparent) 0%, transparent 65%)",
+            }}
+          />
+          <div className="relative">
+            <p className="index-tag text-accent">Join us</p>
+            <h2 className="mt-5 max-w-2xl font-display text-[clamp(2rem,4.4vw,3.4rem)] font-light leading-[1.05] tracking-[-0.015em] text-[oklch(0.97_0.014_95)]">
+              Join the climate{" "}
+              <span className="italic text-accent">revolution.</span>
+            </h2>
+            <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-[oklch(0.97_0.014_95)]/75">
+              This isn&rsquo;t a victory lap, it&rsquo;s a call to action. We&rsquo;re raising for 2026
+              with a goal to distribute at least{" "}
+              <span className="tabular font-mono text-accent">$1M</span> to early-stage climate
+              innovators, especially in the Global South.
+            </p>
 
-          <div className="relative space-y-8">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-5xl font-bold text-balance">Join the Climate Revolution</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance leading-relaxed">
-                This is not a victory lap; it's a call to action. We're raising funds for 2026 with a goal to distribute
-                at least $1M to early-stage climate innovators.
-              </p>
+            <div className="mt-12 grid gap-px overflow-hidden rounded-md border border-[oklch(0.97_0.014_95)]/15 bg-[oklch(0.97_0.014_95)]/15 sm:grid-cols-3">
+              {ways.map((w) => (
+                <div key={w.index} className="bg-secondary p-6">
+                  <span className="font-mono text-xs uppercase tracking-[0.18em] text-accent">{w.index}</span>
+                  <h3 className="mt-3 font-display text-lg font-medium text-[oklch(0.97_0.014_95)]">{w.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[oklch(0.97_0.014_95)]/70">{w.body}</p>
+                </div>
+              ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
-              <div className="text-center space-y-3">
-                <div className="flex justify-center">
-                  <div className="p-4 bg-primary/10 rounded-xl">
-                    <Heart className="w-8 h-8 text-primary" />
-                  </div>
-                </div>
-                <h3 className="font-semibold text-lg">Philanthropic Capital</h3>
-                <p className="text-sm text-muted-foreground text-balance">Support funding rounds in 2026</p>
-              </div>
-
-              <div className="text-center space-y-3">
-                <div className="flex justify-center">
-                  <div className="p-4 bg-secondary/10 rounded-xl">
-                    <Users className="w-8 h-8 text-secondary" />
-                  </div>
-                </div>
-                <h3 className="font-semibold text-lg">Partnership</h3>
-                <p className="text-sm text-muted-foreground text-balance">
-                  Co-create and co-fund future rounds with us
-                </p>
-              </div>
-
-              <div className="text-center space-y-3">
-                <div className="flex justify-center">
-                  <div className="p-4 bg-accent/10 rounded-xl">
-                    <Zap className="w-8 h-8 text-accent" />
-                  </div>
-                </div>
-                <h3 className="font-semibold text-lg">Collaboration</h3>
-                <p className="text-sm text-muted-foreground text-balance">
-                  Host or co-design rounds with your climate thesis
-                </p>
-              </div>
-            </div>
-
-            <div className="space-y-6 p-6 bg-card/50 rounded-xl border-2 border-primary/20 dark:border-primary/30">
-              <p className="text-lg text-center text-balance leading-relaxed">
-                The funding landscape is still failing early-stage climate innovators. There are few mechanisms to get
-                capital into the hands of grassroots builders—especially those in the Global South—when they need it
-                most.
-              </p>
-              <p className="text-center text-primary font-semibold text-lg">
-                Let's fill the gap between ideas and scale, together.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button size="lg" asChild className="text-lg px-8 bg-primary hover:bg-primary/90 text-primary-foreground">
-                <a href="https://impact.climatecoordination.org" target="_blank" rel="noopener noreferrer">
-                  View Impact Report
-                </a>
-              </Button>
+            <div className="mt-12 flex flex-col gap-3 sm:flex-row">
+              <ImpactReportButton
+                size="lg"
+                className="rounded-sm bg-accent px-7 font-mono text-xs uppercase tracking-[0.14em] text-accent-foreground hover:bg-accent/90"
+              >
+                See the impact report
+              </ImpactReportButton>
               <Button
+                asChild
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 border-primary/30 hover:bg-primary/10 bg-transparent"
+                className="rounded-sm border-[oklch(0.97_0.014_95)]/30 bg-transparent px-7 font-mono text-xs uppercase tracking-[0.14em] text-[oklch(0.97_0.014_95)] hover:bg-[oklch(0.97_0.014_95)]/10"
               >
-                Partner With Us
+                <a href="mailto:hello@climatecoordination.org">Partner with us</a>
               </Button>
             </div>
-
-            <div className="text-center pt-4"></div>
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   )

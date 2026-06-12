@@ -3,81 +3,91 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/*
+  GLASSHOUSE LEDGER — "Glasshouse Noon" palette
+  Reference: seed vault / greenhouse · Emotion: hopeful, inspired
+  Collision: solarpunk × Swiss data design
+  Warm kraft paper, chlorophyll green, grow-lamp gold, terracotta clay.
+*/
 :root {
-  --background: oklch(0.99 0.005 150);
-  --foreground: oklch(0.2 0.03 220);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.03 220);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.03 220);
-  --primary: oklch(0.45 0.12 165);
-  --primary-foreground: oklch(0.99 0.005 150);
-  --secondary: oklch(0.3 0.08 220);
-  --secondary-foreground: oklch(0.99 0.005 150);
-  --muted: oklch(0.96 0.01 150);
-  --muted-foreground: oklch(0.45 0.03 200);
-  --accent: oklch(0.55 0.15 185);
-  --accent-foreground: oklch(0.99 0.005 150);
-  --destructive: oklch(0.577 0.245 27.325);
+  --background: oklch(0.962 0.014 95); /* Paper — greenhouse light on kraft */
+  --foreground: oklch(0.26 0.028 158); /* Soil Ink — wet earth / vault shadow */
+  --card: oklch(0.984 0.008 96); /* Glass surface, lit */
+  --card-foreground: oklch(0.26 0.028 158);
+  --popover: oklch(0.984 0.008 96);
+  --popover-foreground: oklch(0.26 0.028 158);
+  --primary: oklch(0.49 0.099 160); /* Chlorophyll — living growth */
+  --primary-foreground: oklch(0.97 0.014 95);
+  --secondary: oklch(0.36 0.05 158); /* Deep canopy */
+  --secondary-foreground: oklch(0.97 0.014 95);
+  --muted: oklch(0.925 0.018 92); /* Kraft tone */
+  --muted-foreground: oklch(0.47 0.027 150); /* Sage gray-green */
+  --accent: oklch(0.77 0.132 78); /* Grow-lamp Gold — sun through glass */
+  --accent-foreground: oklch(0.26 0.028 158);
+  --clay: oklch(0.58 0.135 45); /* Terracotta — clay pots, warmth */
+  --clay-foreground: oklch(0.97 0.014 95);
+  --destructive: oklch(0.55 0.16 32);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.9 0.02 150);
-  --input: oklch(0.9 0.02 150);
-  --ring: oklch(0.45 0.12 165);
-  --chart-1: oklch(0.45 0.12 165);
-  --chart-2: oklch(0.55 0.15 185);
-  --chart-3: oklch(0.5 0.14 150);
-  --chart-4: oklch(0.4 0.1 175);
-  --chart-5: oklch(0.3 0.08 220);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --border: oklch(0.86 0.022 92); /* Hairline kraft rule */
+  --input: oklch(0.86 0.022 92);
+  --ring: oklch(0.49 0.099 160);
+  --chart-1: oklch(0.49 0.099 160); /* chlorophyll */
+  --chart-2: oklch(0.77 0.132 78); /* gold */
+  --chart-3: oklch(0.58 0.135 45); /* terracotta */
+  --chart-4: oklch(0.36 0.05 158); /* canopy */
+  --chart-5: oklch(0.62 0.07 150); /* sage */
+  --radius: 0.3rem; /* Swiss: crisp, near-square */
+  --sidebar: oklch(0.984 0.008 96);
+  --sidebar-foreground: oklch(0.26 0.028 158);
+  --sidebar-primary: oklch(0.49 0.099 160);
+  --sidebar-primary-foreground: oklch(0.97 0.014 95);
+  --sidebar-accent: oklch(0.925 0.018 92);
+  --sidebar-accent-foreground: oklch(0.26 0.028 158);
+  --sidebar-border: oklch(0.86 0.022 92);
+  --sidebar-ring: oklch(0.49 0.099 160);
 }
 
 .dark {
-  --background: oklch(0.1 0.02 220);
-  --foreground: oklch(0.95 0.01 150);
-  --card: oklch(0.14 0.02 220);
-  --card-foreground: oklch(0.95 0.01 150);
-  --popover: oklch(0.14 0.02 220);
-  --popover-foreground: oklch(0.95 0.01 150);
-  --primary: oklch(0.55 0.16 155);
-  --primary-foreground: oklch(0.1 0.02 220);
-  --secondary: oklch(0.4 0.1 215);
-  --secondary-foreground: oklch(0.95 0.01 150);
-  --muted: oklch(0.18 0.02 220);
-  --muted-foreground: oklch(0.65 0.02 150);
-  --accent: oklch(0.65 0.2 185);
-  --accent-foreground: oklch(0.1 0.02 220);
-  --destructive: oklch(0.396 0.141 25.723);
+  --background: oklch(0.19 0.022 158); /* Greenhouse at night */
+  --foreground: oklch(0.94 0.016 92);
+  --card: oklch(0.23 0.024 158);
+  --card-foreground: oklch(0.94 0.016 92);
+  --popover: oklch(0.23 0.024 158);
+  --popover-foreground: oklch(0.94 0.016 92);
+  --primary: oklch(0.62 0.11 160);
+  --primary-foreground: oklch(0.16 0.02 158);
+  --secondary: oklch(0.4 0.05 158);
+  --secondary-foreground: oklch(0.94 0.016 92);
+  --muted: oklch(0.27 0.024 158);
+  --muted-foreground: oklch(0.72 0.03 100);
+  --accent: oklch(0.79 0.13 78);
+  --accent-foreground: oklch(0.18 0.02 158);
+  --clay: oklch(0.63 0.14 45);
+  --clay-foreground: oklch(0.16 0.02 158);
+  --destructive: oklch(0.55 0.16 32);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.22 0.02 220);
-  --input: oklch(0.22 0.02 220);
-  --ring: oklch(0.55 0.16 155);
-  --chart-1: oklch(0.55 0.16 155);
-  --chart-2: oklch(0.65 0.2 185);
-  --chart-3: oklch(0.6 0.18 145);
-  --chart-4: oklch(0.5 0.14 175);
-  --chart-5: oklch(0.4 0.1 215);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --border: oklch(0.32 0.026 158);
+  --input: oklch(0.32 0.026 158);
+  --ring: oklch(0.62 0.11 160);
+  --chart-1: oklch(0.62 0.11 160);
+  --chart-2: oklch(0.79 0.13 78);
+  --chart-3: oklch(0.63 0.14 45);
+  --chart-4: oklch(0.5 0.06 158);
+  --chart-5: oklch(0.68 0.07 150);
+  --sidebar: oklch(0.23 0.024 158);
+  --sidebar-foreground: oklch(0.94 0.016 92);
+  --sidebar-primary: oklch(0.62 0.11 160);
+  --sidebar-primary-foreground: oklch(0.16 0.02 158);
+  --sidebar-accent: oklch(0.27 0.024 158);
+  --sidebar-accent-foreground: oklch(0.94 0.016 92);
+  --sidebar-border: oklch(0.32 0.026 158);
+  --sidebar-ring: oklch(0.62 0.11 160);
 }
 
 @theme inline {
-  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
-  --font-sans: "IBM Plex Sans", "IBM Plex Sans Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: var(--ff-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--ff-display), ui-serif, Georgia, serif;
+  --font-mono: var(--ff-mono), ui-monospace, "SFMono-Regular", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -92,6 +102,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-clay: var(--clay);
+  --color-clay-foreground: var(--clay-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -102,10 +114,10 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -122,44 +134,106 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv01";
+  }
+  /* Display serif: optical sizing + soft terminals for the solarpunk warmth */
+  .font-display {
+    font-optical-sizing: auto;
+  }
+  /* Swiss ledger: tabular figures everywhere we show data */
+  .tabular {
+    font-feature-settings: "tnum", "ss01";
+    font-variant-numeric: tabular-nums;
   }
 }
 
 @layer components {
-  .dark .card-enhanced {
-    @apply border-primary/30 shadow-lg shadow-primary/5;
+  /* Hairline ledger rule — the Swiss-data spine of the page */
+  .ledger-rule {
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--border) 0,
+      var(--border) 1px,
+      transparent 1px,
+      transparent 8px
+    );
+    height: 1px;
   }
-
-  .dark .card-enhanced:hover {
-    @apply border-primary/50 shadow-xl shadow-primary/10;
-  }
-}
-
-/* Custom animations for solarpunk aesthetic */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
+  /* Seed-catalog index tag */
+  .index-tag {
+    @apply font-mono text-xs tracking-[0.18em] uppercase text-muted-foreground;
   }
 }
 
-@keyframes pulse-glow {
-  0%,
+/* ── Germination motion: hopeful, growing, never frantic ── */
+@keyframes grow-up {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scaleY(0.96);
+  }
   100% {
     opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+@keyframes draw-line {
+  0% {
+    stroke-dashoffset: var(--dash, 1000);
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-1.2deg);
   }
   50% {
+    transform: rotate(1.2deg);
+  }
+}
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-14px) translateX(6px);
+  }
+}
+@keyframes sun-pulse {
+  0%,
+  100% {
     opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
   }
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+.animate-grow-up {
+  animation: grow-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-origin: bottom;
+}
+.animate-sway {
+  animation: sway 7s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.animate-drift {
+  animation: drift 12s ease-in-out infinite;
+}
+.animate-sun-pulse {
+  animation: sun-pulse 6s ease-in-out infinite;
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
+@media (prefers-reduced-motion: reduce) {
+  .animate-grow-up,
+  .animate-sway,
+  .animate-drift,
+  .animate-sun-pulse {
+    animation: none;
+  }
 }
