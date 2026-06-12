@@ -1,82 +1,130 @@
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { CountUp } from "@/components/count-up"
+import { ImpactReportButton } from "@/components/impact-report-button"
+
+const ledger = [
+  { index: "01", value: 5.6, prefix: "$", suffix: "M", decimals: 1, label: "Distributed in grants", note: "Direct to builders" },
+  { index: "02", value: 389, label: "Projects funded", note: "Grassroots-led" },
+  { index: "03", value: 56, label: "Countries reached", note: "Six continents" },
+]
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-muted/30 to-card">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
-        <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow"
-          style={{ animationDelay: "1s" }}
-        />
-        <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl animate-pulse-glow"
-          style={{ animationDelay: "2s" }}
-        />
-      </div>
+    <section id="top" className="relative overflow-hidden bg-background">
+      {/* Grow-lamp sun, top-right, sun through greenhouse glass */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-24 -top-24 h-[34rem] w-[34rem] rounded-full animate-sun-pulse"
+        style={{
+          background:
+            "radial-gradient(circle, color-mix(in oklch, var(--accent) 55%, transparent) 0%, transparent 62%)",
+        }}
+      />
+      {/* Faint Swiss baseline grid, vertical hairlines */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.45]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, color-mix(in oklch, var(--border) 70%, transparent) 1px, transparent 1px)",
+          backgroundSize: "clamp(80px, 12.5vw, 160px) 100%",
+          maskImage: "linear-gradient(to bottom, black, transparent 92%)",
+        }}
+      />
 
-      <div className="container relative z-10 px-4 py-20">
-        <div className="max-w-5xl mx-auto text-center space-y-8">
-          <div className="flex justify-center items-center gap-6 mb-8">
-            <div className="relative opacity-95 mix-blend-normal">
-              <Image
-                src="/images/logo-hero.png"
-                alt="Climate Coordination Network Logo"
-                width={180}
-                height={180}
-                className="drop-shadow-sm"
-                priority
-              />
-            </div>
-            <div className="text-left">
-              <div className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                <div className="text-5xl">Climate</div>
-                <div className="text-5xl">Coordination</div>
-                <div className="text-5xl">Network</div>
-              </div>
-            </div>
-          </div>
+      <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-16 md:px-6 md:pb-28 md:pt-24">
+        <div className="grid items-end gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+          {/* Left: headline column */}
+          <div>
+            <p className="index-tag animate-grow-up">
+              <span className="text-primary">●</span>&nbsp;&nbsp;Coordinating capital for the climate
+            </p>
 
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-balance leading-relaxed">
-            Accelerating blockchain-enabled climate solutions on a global scale. Funding the grassroots innovators
-            rewriting our climate future.
-          </p>
-
-          {/* Stats bar */}
-          <div className="flex flex-wrap justify-center gap-8 py-8">
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold font-mono text-primary">$5.6M</div>
-              <div className="text-sm text-muted-foreground mt-1">Distributed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold font-mono text-secondary">389</div>
-              <div className="text-sm text-muted-foreground mt-1">Projects</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold font-mono text-accent">56</div>
-              <div className="text-sm text-muted-foreground mt-1">Countries</div>
-            </div>
-          </div>
-
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" className="text-lg px-8 bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
-              <a href="https://impact.climatecoordination.org" target="_blank" rel="noopener noreferrer">
-                View Impact Report
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 border-primary/30 hover:bg-primary/10 bg-transparent"
+            <h1
+              className="mt-6 font-display text-[clamp(2.7rem,6vw,4.6rem)] font-light leading-[1.02] tracking-[-0.02em] text-foreground animate-grow-up"
+              style={{ animationDelay: "0.05s" }}
             >
-              Partner With Us
-            </Button>
+              We fund the people{" "}
+              <span className="italic text-primary">growing</span> a
+              <br className="hidden md:block" /> livable climate future.
+            </h1>
+
+            <p
+              className="mt-7 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground animate-grow-up"
+              style={{ animationDelay: "0.12s" }}
+            >
+              Climate Coordination Network turns crypto into transparent, on-chain
+              grants, putting capital directly in the hands of grassroots
+              innovators cutting emissions in the real world.
+            </p>
+
+            <div
+              className="mt-9 flex flex-col gap-3 sm:flex-row animate-grow-up"
+              style={{ animationDelay: "0.18s" }}
+            >
+              <ImpactReportButton
+                size="lg"
+                className="rounded-sm bg-primary px-7 font-mono text-xs uppercase tracking-[0.14em] text-primary-foreground hover:bg-primary/90"
+              >
+                See the impact report
+              </ImpactReportButton>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-sm border-foreground/25 bg-transparent px-7 font-mono text-xs uppercase tracking-[0.14em] text-foreground hover:bg-foreground/[0.04]"
+              >
+                <a href="#projects">Partner with us</a>
+              </Button>
+            </div>
+
+            <p
+              className="mt-6 flex items-center gap-2 font-mono text-xs tracking-[0.04em] text-muted-foreground animate-grow-up"
+              style={{ animationDelay: "0.24s" }}
+            >
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
+              Every grant traceable on-chain, no greenwashing, just receipts.
+            </p>
+          </div>
+
+          {/* Right: seed-catalog ledger */}
+          <div className="relative">
+            <p className="index-tag mb-4 text-accent">The ledger</p>
+            <dl className="divide-y divide-border border-y border-border">
+              {ledger.map((row, i) => (
+                <div
+                  key={row.index}
+                  className="flex items-baseline gap-4 py-4 animate-grow-up"
+                  style={{ animationDelay: `${0.2 + i * 0.1}s` }}
+                >
+                  <span className="index-tag w-6 shrink-0 pt-1">{row.index}</span>
+                  <div className="flex-1">
+                    <dt>
+                      <CountUp
+                        to={row.value}
+                        prefix={row.prefix}
+                        suffix={row.suffix}
+                        decimals={row.decimals ?? 0}
+                        className="tabular font-mono text-4xl font-medium leading-none text-foreground md:text-5xl"
+                      />
+                    </dt>
+                    <dd className="mt-2 flex items-center justify-between gap-3">
+                      <span className="text-sm text-muted-foreground">{row.label}</span>
+                      <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-accent">
+                        {row.note}
+                      </span>
+                    </dd>
+                  </div>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
+      </div>
+
+      {/* Closing ledger rule, the Swiss spine handing off to the next section */}
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
+        <div className="ledger-rule" />
       </div>
     </section>
   )
